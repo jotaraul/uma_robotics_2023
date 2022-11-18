@@ -71,7 +71,7 @@ def drawObservations(fig, ax, from_pose, world, linestyle=':', **kwargs):
 
 def drawFOV(fig, ax, from_pose, fov, max_range, color='b', linewidth=.5, **kwargs):
     alpha = fov/2
-    angles = np.linspace(-alpha,alpha, (fov/0.01))
+    angles = np.linspace(-alpha,alpha, int(fov/0.01))
     nAngles = angles.shape[0]
     arc_points = np.zeros((2,nAngles))
 
